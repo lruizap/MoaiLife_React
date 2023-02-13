@@ -17,18 +17,18 @@ import Dropzone from "react-dropzone";
 import FlexBetween from "components/FlexBetween";
 
 const registerSchema = yup.object().shape({
-  firstName: yup.string().required("requerido"),
-  lastName: yup.string().required("requerido"),
-  email: yup.string().email("Correo no válido").required("requerido"),
-  password: yup.string().required("requerido"),
-  location: yup.string().required("requerido"),
-  occupation: yup.string().required("requerido"),
-  picture: yup.string().required("requerido"),
+  firstName: yup.string().required("required"),
+  lastName: yup.string().required("required"),
+  email: yup.string().email("Correo no válido").required("required"),
+  password: yup.string().required("required"),
+  location: yup.string().required("required"),
+  occupation: yup.string().required("required"),
+  picture: yup.string().required("required"),
 });
 
 const loginSchema = yup.object().shape({
-  email: yup.string().email("Correo no válido").required("requerido"),
-  password: yup.string().required("requerido"),
+  email: yup.string().email("Correo no válido").required("required"),
+  password: yup.string().required("required"),
 });
 
 const initialValuesRegister = {
@@ -134,7 +134,7 @@ const Form = () => {
                   onBlur={handleBlur}
                   onChange={handleChange}
                   value={values.firstName}
-                  name="nombre"
+                  name="firstName"
                   error={
                     Boolean(touched.firstName) && Boolean(errors.firstName)
                   }
@@ -146,27 +146,27 @@ const Form = () => {
                   onBlur={handleBlur}
                   onChange={handleChange}
                   value={values.lastName}
-                  name="apellido"
+                  name="lastName"
                   error={Boolean(touched.lastName) && Boolean(errors.lastName)}
                   helperText={touched.lastName && errors.lastName}
                   sx={{ gridColumn: "span 2" }}
                 />
                 <TextField
-                  label="Localización"
+                  label="Localizacion"
                   onBlur={handleBlur}
                   onChange={handleChange}
                   value={values.location}
-                  name="localizacion"
+                  name="location"
                   error={Boolean(touched.location) && Boolean(errors.location)}
                   helperText={touched.location && errors.location}
                   sx={{ gridColumn: "span 4" }}
                 />
                 <TextField
-                  label="Ocupación"
+                  label="Ocupacion"
                   onBlur={handleBlur}
                   onChange={handleChange}
                   value={values.occupation}
-                  name="ocupacion"
+                  name="occupation"
                   error={
                     Boolean(touched.occupation) && Boolean(errors.occupation)
                   }
@@ -183,7 +183,7 @@ const Form = () => {
                     acceptedFiles=".jpg,.jpeg,.png"
                     multiple={false}
                     onDrop={(acceptedFiles) =>
-                      setFieldValue("Imagen", acceptedFiles[0])
+                      setFieldValue("picture", acceptedFiles[0])
                     }
                   >
                     {({ getRootProps, getInputProps }) => (
