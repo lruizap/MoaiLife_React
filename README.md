@@ -2,7 +2,7 @@
 
 ## Un proyecto con react
 
-Esta es la documentaxción del proyecto [Documentación](https://www.notion.so/lruizap/MERN-App-with-AUTH-Likes-Dark-Mode-React-MongoDB-MUI-97cf29a0484b48be9bd28b52c18e83da?pvs=4).
+Esta es la documentación del proyecto [Documentación](https://www.notion.so/lruizap/MERN-App-with-AUTH-Likes-Dark-Mode-React-MongoDB-MUI-97cf29a0484b48be9bd28b52c18e83da?pvs=4).
 
 # Getting Started with Create React App
 
